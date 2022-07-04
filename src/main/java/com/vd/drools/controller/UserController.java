@@ -23,7 +23,6 @@ public class UserController {
     @RequestMapping(value = "provident-cut-user", method = RequestMethod.POST)
     public ResponseEntity<BaseResponse> getProvidentCutForUser(@Valid @RequestBody ProvidentFundRequest request){
 
-
         BaseResponse responseObject = userService.getProvidentFund(request);
         return ResponseEntity.ok(responseObject);
 
@@ -32,7 +31,6 @@ public class UserController {
 
     @RequestMapping(value = "provident-cut-general", method = RequestMethod.POST)
     public ResponseEntity<BaseResponse> getProvidentCutForOthers(@Valid @RequestBody ProvidentFundRequest request){
-
 
         BaseResponse responseObject = userService.getProvidentFund(request);
         return ResponseEntity.ok(responseObject);
@@ -43,7 +41,6 @@ public class UserController {
     @RolesAllowed("admin")
     @RequestMapping(value = "provident-cut-admin", method = RequestMethod.POST)
     public ResponseEntity<BaseResponse> getProvidentCutForAdmin(@Valid @RequestBody ProvidentFundRequest request){
-
 
         BaseResponse responseObject = userService.getProvidentFund(request);
         return ResponseEntity.ok(responseObject);
